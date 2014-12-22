@@ -6,6 +6,29 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<nav>
+	<ul class="nav nav-tabs">
+		<li>
+			<%= link_to "Inicio", root_path %>
+		</li>
+			<% if usuario_signed_in? %>
+			<li>
+				<%= link_to "Editar Perfil", edit_usuario_session_path(current_usuario) %>
+			</li>
+			<li>
+				<%= link_to "Cerrar Sesion", destroy_usuario_session_path, method: :delete %>
+			</li>
+			<% else %>
+			<li>
+				<%= link_to "Ingresar", new_usuario_session_path %>
+			</li>
+			<li>
+				<%= link_to "Registrarse", new_usuario_registration_path %>
+			</li>
+			<% end %>
+
+	</ul>
+</nav>
 <body>
 
 	<p class="notice" style="<%= "display:none;" if notice.nil? %>"><%= notice %></p>
