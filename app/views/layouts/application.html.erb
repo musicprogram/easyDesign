@@ -8,7 +8,10 @@
 </head>
 <body>
 
-<%= yield %>
+	<p class="notice" style="<%= "display:none;" if notice.nil? %>"><%= notice %></p>
+	<p class="alert" style="<%= "display:none;" if alert.nil? %>"><%= alert %></p>
+
+	<%= yield %>
 
 </body>
 </html>
