@@ -1,1 +1,10 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
+.no-float{
+	float:none;
+
+}
+
+.center-block{
+	width:value;
+}
