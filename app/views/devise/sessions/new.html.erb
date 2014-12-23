@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
-  <div class="col-md-3 center-block no-float"></div>
+  <div class="col-md-3 center-block no-float">
+
   <h2><span class="glyphicon glyphicon-user"></span> Iniciar sesion</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html:{role:"form"}) do |f| %>
@@ -30,6 +31,6 @@
         <%= render "devise/shared/links" %>
       </div>
 </div>
-
+</div>
 
 </div>
